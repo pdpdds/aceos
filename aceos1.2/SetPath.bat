@@ -1,0 +1,1 @@
+PATH=C:\MinGW\bin;C:\Program Files (x86)\nasm
