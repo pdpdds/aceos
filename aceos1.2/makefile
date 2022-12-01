@@ -11,7 +11,7 @@ AsmOptions = -i Includes -w+orphan-labels -f win32
 gccoptions = -m32 -fno-use-cxa-atexit -D KERNELBUILT -nostartfiles -ffreestanding -c  -I Includes
 gxxoptions = -m32 -fno-use-cxa-atexit -D KERNELBUILT -nostartfiles -fno-exceptions -ffreestanding -c  -I Includes 
 LibDir = C:\msys64\mingw32\lib\gcc\i686-w64-mingw32\11.2.0
-LibDir2 = C:\msys64\home\juhan\libc
+LibDir2 = ..\libc
 #------------------------------------------------------------------------------------------------
 .PHONY	:	all
 all	:	Kernel Boot	

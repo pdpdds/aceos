@@ -5,7 +5,7 @@ KernelObjects = Kernel.o Processor.o Timer.o  CKernel.o  MemMan.o Heap.o DeviceD
 		VGAText.o VGACursor.o Keyboard.o CKeyboard.o PIC.o PCI.o RTC.o GSH.o Harddisk.o \
 		HMess.o Beep.o Printf.o  Mouse.o CMouse.o Partition.o FAT.o NumConvert.o String.o
 LibDir = C:\msys64\mingw32\lib\gcc\i686-w64-mingw32\11.2.0
-LibDir2 = C:\msys64\home\juhan\libc
+LibDir2 = ..\libc
 
 Kernel	:	$(KernelObjects)
 	ld  -m  i386pe -Ttext 0x19000  -o Kernel.bin $(KernelObjects) -L$(LibDir) -L$(LibDir2) -lc
