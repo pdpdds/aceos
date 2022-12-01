@@ -15,11 +15,11 @@ GCC_COMPILER = gcc
 GXX_COMPILER = g++
 INCLUDE_DIR = Include
 ASM_OPTIONS = -i $(INCLUDE_DIR) -w+orphan-labels -f win32
-GCC_OPTIONS = -D KERNELBUILT -nostartfiles -ffreestanding -fno-use-cxa-atexit -c  -I $(INCLUDE_DIR) -Wall -m32
-GXX_OPTIONS = -D KERNELBUILT -nostartfiles -fno-exceptions -fno-use-cxa-atexit -ffreestanding -c  -I $(INCLUDE_DIR)  -Wall  -m32
+GCC_OPTIONS = -D KERNELBUILT -nostartfiles -ffreestanding -fno-use-cxa-atexit -c  -I $(INCLUDE_DIR) -Wall -m32 -I ..\libc\include
+GXX_OPTIONS = -D KERNELBUILT -nostartfiles -fno-exceptions -fno-use-cxa-atexit -ffreestanding -c  -I $(INCLUDE_DIR)  -Wall  -m32  -I ..\libc\include
 IMPDEF = ..\impdef.exe
 LibDir = C:\msys64\mingw32\lib\gcc\i686-w64-mingw32\11.2.0
-LibDir2 = C:\msys64\home\juhan\libc
+LibDir2 = ..\libc
 
 Memory = $(patsubst %.c,%.o,$(wildcard Memory/*.c)) $(patsubst %.asm,%.o,$(wildcard Memory/*.asm))
 String = $(patsubst %.c,%.o,$(wildcard String/*.c))
